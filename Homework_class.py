@@ -179,3 +179,21 @@ print(f'{Student_the_first} {Student2}')
 print(f'{Lector1} {Lector2}')
 
 print(f'{Reviewer1} {Reviewer2}')
+
+
+def course_m_average_stud(Student_list, course):
+    average_grade = []
+    for student in Student_list:
+        if course in student.grades:
+            average_grade += student.grades[course]
+    if average_grade:
+        return sum(average_grade) / len(average_grade)
+
+
+def course_average_grade_lect(Lector_list, course):
+    average_grade = []
+    for lector in Lector_list:
+        if course in lector.grades:
+            average_grade += lector.grades[course]
+    if average_grade:
+        return sum(average_grade) / len(average_grade) 
